@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TOB BARBER | Estilo y precisión</title>
+<meta name="description" content="TOB BARBER. Lunes a sábados de 08:00 a 21:00. Reservá tu turno por WhatsApp.">
+
+<style>
+:root {
+    --gold: #d6b16d;
+    --black: #090909;
+    --panel: #151515;
+    --white: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #292929;
+}
+
+.brand {
+    color: var(--gold);
+    font-size: 23px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.hero {
+    min-height: 78vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(
+        ellipse at center,
+        #302518 0%,
+        #090909 70%
+    );
+}
+
+.logo {
+    width: 170px;
+    height: 170px;
+    object-fit: contain;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+
+/* Logo provisional si todavía no se coloca la imagen */
+.logo-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    font-size: 43px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 8vw, 75px);
+    letter-spacing: 4px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--gold);
+}
+
+.hero p {
+    color: #c2c2c2;
+    max-width: 500px;
+    margin: 20px 0 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 26px;
+    background: var(--gold);
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: .2s;
+}
+
+.button:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+section {
+    padding: 75px 7%;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.title span {
+    color: var(--gold);
+}
+
+.description {
+    color: #aaa;
+    text-align: center;
+}
+
+.about {
+    text-align: center;
+    background: #101010;
+}
+
+.about p {
+    max-width: 600px;
+    margin: 20px auto 0;
+    color: #bbb;
+}
+
+.schedule {
+    max-width: 520px;
+    margin: 35px auto 0;
+    padding: 25px;
+    background: var(--panel);
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.schedule-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.schedule-row strong {
+    color: var(--gold);
+    text-align: right;
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact p {
+    margin: 15px 0 25px;
+    color: #bbb;
+}
+
+footer {
+    padding: 25px 15px;
+    border-top: 1px solid #292929;
+    text-align: center;
+    color: #888;
+    font-size: 13px;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 17px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 55px 6%;
+    }
+
+    .schedule {
+        padding: 18px;
+    }
+
+    .schedule-row {
+        font-size: 13px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="brand">TOB BARBER</div>
+
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="inicio">
+
+        <!-- CAMBIAR POR EL LOGO REAL -->
+        <div class="logo logo-placeholder" id="logo">
+            TB
+        </div>
+
+        <h1>TOB <span>BARBER</span></h1>
+
+        <p>
+            Tu estilo. Tu identidad.
+            Una experiencia hecha para vos.
+        </p>
+
+        <a href="#contacto" class="button">
+            RESERVAR TURNO
+        </a>
+    </section>
+
+    <section class="about" id="nosotros">
+        <h2 class="title">
+            SOBRE <span>TOB BARBER</span>
+        </h2>
+
+        <p>
+            Un espacio dedicado al estilo y la atención
+            personalizada. Próximamente, más información.
+        </p>
+    </section>
+
+    <section id="horarios">
+        <h2 class="title">
+            NUESTROS <span>HORARIOS</span>
+        </h2>
+
+        <p class="description">
+            Te esperamos de lunes a sábado.
+        </p>
+
+        <div class="schedule">
+            <div class="schedule-row">
+                <span>Lunes a sábado</span>
+                <strong>08:00 - 21:00</strong>
+            </div>
+
+            <div class="schedule-row">
+                <span>Domingo</span>
+                <strong>Cerrado</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contacto">
+        <h2 class="title">
+            RESERVÁ TU <span>TURNO</span>
+        </h2>
+
+        <p>
+            Consultá la disponibilidad directamente
+            por WhatsApp.
+        </p>
+
+        <a class="button" id="whatsapp" href="#" target="_blank"
+           rel="noopener noreferrer">
+            WHATSAPP
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    © <span id="year"></span> TOB BARBER.
+    Todos los derechos reservados.
+</footer>
+
+<script>
+const numeroWhatsApp = "595985811375";
+
+const mensaje = encodeURIComponent(
+    "Hola, TOB BARBER. Quiero consultar por un turno."
+);
+
+document.getElementById("whatsapp").href =
+    `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// Para mostrar el logo real, guardalo como logo.jpeg
+// en la misma carpeta que index.html.
+const logo = document.getElementById("logo");
+
+const imagenLogo = new Image();
+imagenLogo.src = "img/logo.jpeg";
+imagenLogo.alt = "Logo de TOB BARBER";
+imagenLogo.className = "logo";
+
+imagenLogo.onload = () => {
+    logo.replaceWith(imagenLogo);
+};
+</script>
+
+</body>
+</html>
